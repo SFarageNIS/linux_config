@@ -12,7 +12,7 @@ Here are some of the tips I follow when making a new install.
     - `/etc/pam.d/common-password` - edit the line with pam_unix.so, add SHA512 if not present, and `rounds=1000000` if not present.
     - `adduser` If you didn't do above step, do: `chpasswd -c SHA512 -s 1000000`, Ctrl+D to break, verify with `cat /etc/shadow`
 - [ ]  Refresh SSH keys if using base image of anything
-    - [ ]  `cd etc/ssh/`  `dpkg-reconfigure openssh-server` `passwd root`
+    - [ ]  `cd etc/ssh/`, remove all existing default keys `rm -v /etc/ssh/ssh_host_*`, regenerate new keys `dpkg-reconfigure openssh-server`, restart ssh service `systemctl restart ssh`
     
 ## Vim settings
 - [ ]  Vim settings (~/.vimrc)
