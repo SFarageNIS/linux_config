@@ -42,3 +42,30 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 ```
+
+## Create parent directories if path includes them
+```
+# create parent directories
+alias mkdir='mkdir -pv'
+```
+
+## Safety net action
+Not sure if I want this, but it looks helpful
+```
+# do not delete / or prompt if deleting more than 3 files at a time #
+alias rm='rm -I --preserve-root'
+# confirmation #
+alias mv='mv -i'
+alias cp='cp -i'
+alias ln='ln -i'
+# Parenting changing perms on / #
+alias chown='chown --preserve-root'
+alias chmod='chmod --preserve-root'
+alias chgrp='chgrp --preserve-root'
+```
+
+## Resume wget by default
+```
+# Resume by default - this one saved by butt so many times ##
+alias wget='wget -c'
+```
