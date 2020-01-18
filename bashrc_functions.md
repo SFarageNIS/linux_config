@@ -34,3 +34,11 @@ alias ......="cd ../../../../.."
 # better copying
 alias cp="rsync -avz --progress --stats"
 ```
+
+## List alias
+```
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+```
