@@ -69,3 +69,11 @@ alias chgrp='chgrp --preserve-root'
 # Resume by default - this one saved by butt so many times ##
 alias wget='wget -c'
 ```
+
+## Easy-type password generation
+```
+new_password ()
+{
+ echo "$(pwgen -s -1 6 -A0)$(pwgen -s -1 6 -c0 -r abcdefghijklmnopqrstuvwxyz)$(pwgen -s -1 8 -nA -r abcdefghijklmnopqrstuvwxyz)$(pwgen -s -1 6 -A0)$(pwgen -s -1 8 -nA -r abcdefghijklmnopqrstuvwxyz)$(pwgen -s -1 1 -y)$(pwgen -s -1 2 -nA -r abcdefghijklmnopqrstuvwxyz)"
+}
+```
