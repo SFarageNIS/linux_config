@@ -74,7 +74,10 @@ alias wget='wget -c'
 ```
 new_password ()
 {
+ if [ -z "$1" ]; then times=1; else times=$1; fi
+ for (( c=1; c<=times; c++ ))
  echo "$(rand_upper 6)$(rand_lower 6)$(rand_numeric 8)$(rand_upper 6)$(rand_numeric 8)$(rand_symbols 1)$(rand_numeric 2)"
+ done
 }
 
 function rand_upper ()
