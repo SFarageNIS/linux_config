@@ -70,10 +70,35 @@ alias chgrp='chgrp --preserve-root'
 alias wget='wget -c'
 ```
 
-## Easy-type password generation
+## Easy-type password generation and randomness
 ```
 new_password ()
 {
- echo "$(pwgen -s -1 6 -A0)$(pwgen -s -1 6 -c0 -r abcdefghijklmnopqrstuvwxyz)$(pwgen -s -1 8 -nA -r abcdefghijklmnopqrstuvwxyz)$(pwgen -s -1 6 -A0)$(pwgen -s -1 8 -nA -r abcdefghijklmnopqrstuvwxyz)$(pwgen -s -1 1 -y)$(pwgen -s -1 2 -nA -r abcdefghijklmnopqrstuvwxyz)"
+ echo "$(rand_upper 6)$(rand_lower 6)$(rand_numeric 8)$(rand_upper 6)$(rand_numeric 8)$(rand_symbols 1)$(rand_numeric 2)"
 }
+
+function rand_upper ()
+{
+  length=$1
+  pwgen -s -1 $length -c0 -r abcdefghijklmnopqrstuvwxyz #upper
+}
+
+function rand_lower ()
+{
+  length=$1
+  pwgen -s -1 $length -A0 # Lower case random generation
+}
+
+function rand_numeric ()
+{
+  length=$1
+  pwgen -s -1 $length -nA -r abcdefghijklmnopqrstuvwxyz #numeric
+}
+
+function rand_symbols ()
+{
+  length=$1
+  pwgen -s -1 $length -A0y -r abcdefghijklmnopqrstuvwxyz #symbols
+}
+
 ```
