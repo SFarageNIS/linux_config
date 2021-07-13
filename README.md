@@ -2,7 +2,7 @@
 
 Here you'll find my general customizations, tweaks and idealy dotfiles for easy import/accessibility across my devices and implementations.
 
-Some of the dotfile settings require other downloads/setup (plugin system / colorscheme)
+Some of the dotfile settings require other downloads/setup ([plugin system](https://github.com/VundleVim/Vundle.vim#quick-start) / [colorscheme](https://github.com/tomasiser/vim-code-dark#installation))
 
 ## Ubuntu/Kbuntu-specific
 My current work environment is [kubuntu](https://kubuntu.org/) on a Dell Precision 5520.
