@@ -7,6 +7,7 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'Syntastic'
 Plugin 'The-NERD-tree'
 
 call vundle#end()  " required
@@ -35,3 +36,9 @@ colorscheme codedark
 " whitespace action
 set listchars=tab:▸▸,trail:~
 set list
+
+" toggle nerdtree via F2
+:nmap <F2> :NERDTreeToggle<CR>
+
+" close vim if only nerdtree is open
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
