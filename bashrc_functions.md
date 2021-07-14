@@ -8,6 +8,19 @@ function update_all {
         sudo apt update -y && sudo apt upgrade -y && sudo apt-get dist-upgrade -y && sudo apt autoremove -y
 }
 ```
+Dell specific update (and awscli)
+```
+#update all function
+function update_all {
+  sudo apt update -y && sudo apt upgrade -y && sudo apt-get dist-upgrade -y && sudo apt autoremove -y && pip3 install awscli --upgrade --user && fwupdmgr get-updates
+}
+```
+
+## Untar
+```
+# un tar tar.gz
+alias untar="tar -xzvf"
+```
 
 ## Easy directory traversal
 ```
