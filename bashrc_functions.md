@@ -48,6 +48,14 @@ alias ......="cd ../../../../.."
 alias cp="rsync -avz --progress --stats"
 ```
 
+## Make backup file
+```
+function backup_file {
+  cp -v $1{,.bak}
+}
+```
+
+
 ## List alias (these are built-in to new Ubuntu)
 ```
 # some more ls aliases
@@ -69,7 +77,8 @@ Not sure if I want this, but it looks helpful
 alias rm='rm -I --preserve-root'
 # confirmation #
 alias mv='mv -i'
-alias cp='cp -i'
+# don't want to double-alias cp if you're using the rsync alias above
+# alias cp='cp -i'
 alias ln='ln -i'
 # Parenting changing perms on / #
 alias chown='chown --preserve-root'
