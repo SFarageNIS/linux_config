@@ -51,8 +51,15 @@ alias cp="rsync -avz --progress --stats"
 ## Make backup file
 ```
 function backup_file {
-  cp -v $1{,.bak}
+  if test -f "$1"; then
+    cp -vi "$1"{,.bak}
+  else
+    echo "$1 doesn't exist or isn't a file"
+  fi
 }
+
+# alternatively
+# [[ -f "$1" ]] && cp -v "$1"{,.bak} || echo "$1 doesn't exist or isn't a file"
 ```
 
 
