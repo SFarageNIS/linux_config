@@ -9,9 +9,9 @@ Here are some of the tips I follow when making a new install.
 - [ ]  [https://linux-audit.com/ubuntu-server-hardening-guide-quick-and-secure/](https://linux-audit.com/ubuntu-server-hardening-guide-quick-and-secure/)
 - [ ]  Create new user, add to su group
     - Update [default PAM settings](https://askubuntu.com/questions/894404/how-to-increase-the-number-of-hashing-rounds-for-etc-shadow)
-    - `/etc/pam.d/common-password` - edit the line with pam_unix.so, add SHA512 if not present, and `rounds=2000000` if not present.  2500000 works for a local VM with decent resouces.
+    - `/etc/pam.d/common-password` - edit the line with pam_unix.so, add SHA512 if not present, and `rounds=3000000` if not present.
     - 2021-10 mine looks like this on 5900x `password        [success=1 default=ignore]      pam_unix.so obscure sha512 rounds=3500000`
-    - `adduser` If you didn't do above step, do: `chpasswd -c SHA512 -s 2000000`, Ctrl+D to break, verify with `cat /etc/shadow`
+    - `adduser` If you didn't do above step, do: `chpasswd -c SHA512 -s 3000000`, Ctrl+D to break, verify with `cat /etc/shadow`
 - [ ]  Refresh SSH keys if using base image of anything
     - [ ]  `cd etc/ssh/`, remove all existing default keys `rm -v /etc/ssh/ssh_host_*`, regenerate new keys `dpkg-reconfigure openssh-server`, restart ssh service `systemctl restart ssh`
     
