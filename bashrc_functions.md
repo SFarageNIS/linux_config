@@ -63,7 +63,7 @@ alias cp="rsync -avz --progress --stats"
 ```
 function backup_file {
   if test -f "$1"; then
-    cp -vi "$1"{,.bak}
+    sudo cp -vi "$1"{,.bak}
   else
     echo "$1 doesn't exist or isn't a file"
   fi
