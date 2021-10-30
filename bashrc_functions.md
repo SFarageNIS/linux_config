@@ -1,6 +1,17 @@
 # Bash shell customizations
 Some of these are random, but my favorite is the 'update_all' function.
 
+## Import other files that contain customizations
+```
+# import all the good stuff
+for file in ~/.bashrc.d/*; do
+  if [ -f ${file} ]
+      echo "Loading: " $( basename ${file} );then
+      . ${file}
+  fi
+done
+```
+
 ## Update all function
 ```
 # all-in-one-update-all
@@ -110,28 +121,42 @@ new_password ()
  done
 }
 
+function length_not_specified ()
+{
+  length=$2
+  if [ -z "$2" ]
+    then
+      length=$1
+  fi
+}
+
+function randstring ()
+{
+  length_not_specified 35 $1
+  pwgen -s -1 $length # Lower case random generation
+}
+
 function rand_upper ()
 {
-  length=$1
+  length_not_specified 10 $1 
   pwgen -s -1 $length -c0 -r abcdefghijklmnopqrstuvwxyz #upper
 }
 
 function rand_lower ()
 {
-  length=$1
+  length_not_specified 10 $1
   pwgen -s -1 $length -A0 # Lower case random generation
 }
 
 function rand_numeric ()
 {
-  length=$1
+  length_not_specified 10 $1
   pwgen -s -1 $length -nA -r abcdefghijklmnopqrstuvwxyz #numeric
 }
 
 function rand_symbols ()
 {
-  length=$1
+  length_not_specified 10 $1
   pwgen -s -1 $length -A0y -r abcdefghijklmnopqrstuvwxyz #symbols
 }
-
 ```
