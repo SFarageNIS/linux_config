@@ -4,7 +4,10 @@ Here you'll find my general customizations, tweaks and idealy dotfiles for easy 
 
 Some of the dotfile settings require other downloads/setup ([plugin system](https://github.com/VundleVim/Vundle.vim#quick-start), [plugins](https://github.com/preservim/nerdtree#installation), [colorscheme](https://github.com/tomasiser/vim-code-dark#installation) and more)
 
+This is primarily for my reference as I grow in comfortability with the Linux world in general.  Many things will be security-focused.
+
 ## Ubuntu/Kbuntu-specific
+My latest personal environment is vanilla Ubunutu (without 3rd party, extras) on a custom built AMD 5900x with MSI RX 6800  
 My current work environment is [kubuntu](https://kubuntu.org/) on a Dell Precision 5520.
 
 ## Kali-specific
