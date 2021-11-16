@@ -11,6 +11,14 @@ threshold = 70
 style = "bold dimmed white"
 disabled = false
 
+[aws]
+format = '\[[$symbol($profile)(\($region\))(\[$duration\])]($style)\]'
+symbol = "  "
+
+[directory]
+read_only = " "
+fish_style_pwd_dir_length=3
+
 [time]
 time_format = "%Y%m%d-%H%M%S"
 format = "🕙 $time($style) "
@@ -31,14 +39,14 @@ format = '[\($state( $progress_current of $progress_total)\)]($style) '
 
 [git_status]
 conflicted = "⚔️ "
-ahead = "🏎️  💨 ×${count}"
+ahead = "🏎️ 💨 ×${count}"
 behind = "🐢 ×${count}"
-diverged = "🔱 🏎️  💨 ×${ahead_count} 🐢 ×${behind_count}"
-untracked = "🛤️   ×${count}"
+diverged = "🔱 🏎️ 💨 ×${ahead_count} 🐢 ×${behind_count}"
+untracked = "🛤️  ×${count}"
 stashed = "📦 "
 modified = "📝 ×${count}"
-staged = "🗃️   ×${count}"
+staged = "🗃️  ×${count}"
 renamed = "📛 ×${count}"
-deleted = "🗑️   ×${count}"
+deleted = "🗑️  ×${count}"
 style = "bright-white"
 format = "$all_status$ahead_behind"
