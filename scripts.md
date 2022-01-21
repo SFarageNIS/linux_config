@@ -12,3 +12,10 @@ https://news.ycombinator.com/item?id=30027344
 https://github.com/baicunko/scanyourpdf
 
 ---
+
+## New password generation
+(requires pwgen)
+
+[password script](scripts/newpassword.sh)
+
+---
