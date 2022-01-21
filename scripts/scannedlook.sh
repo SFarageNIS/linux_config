@@ -1,4 +1,3 @@
-## Make a file look scanned
 #!/bin/bash
 # Make a pdf look like it was scanned.
 
