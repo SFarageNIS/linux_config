@@ -1,8 +1,4 @@
 ## Make a file look scanned
-
-Requires ImageMagick, pdftk, python3
-
-```
 #!/bin/bash
 # Make a pdf look like it was scanned.
 
@@ -35,6 +31,3 @@ done
 # use "ls -v" to order files correctly (p_out-X.jpg where X is 0 1 2 ... 9 10 11 ...)
 pdftk $(ls -v "$tmp"/p_out*.pdf) cat output "$2" &&
 rm -rf "$tmp"
-```
-
-From https://news.ycombinator.com/item?id=30024165, https://news.ycombinator.com/item?id=30027344, https://github.com/baicunko/scanyourpdf
