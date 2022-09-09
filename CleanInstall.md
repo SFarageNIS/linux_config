@@ -12,8 +12,9 @@ Here are some of the tips I follow when making a new install.
     - `/etc/pam.d/common-password` - edit the line with pam_unix.so, add SHA512 if not present, and `rounds=3000000` if not present.
     - 2021-10 mine looks like this on 5900x `password        [success=1 default=ignore]      pam_unix.so obscure sha512 rounds=3500000`
     - `adduser` If you didn't do above step, do: `chpasswd -c SHA512 -s 3000000`, Ctrl+D to break, verify with `cat /etc/shadow`
-- [ ]  Refresh SSH keys if using base image of anything
+- [ ]  SSH - refresh keys if using base image of anything
     - [ ]  `cd etc/ssh/`, remove all existing default keys `rm -v /etc/ssh/ssh_host_*`, regenerate new keys `dpkg-reconfigure openssh-server`, restart ssh service `systemctl restart ssh`
+- [ ]  SSH - [Change default port](https://www.scalahosting.com/kb/changing-default-ssh-port-in-openssh/) and only allow keyfiles, [general hardening](https://www.digitalocean.com/community/tutorials/how-to-harden-openssh-on-ubuntu-20-04)
     
 ## Vim settings
 - [ ]  Vim settings (~/.vimrc)
