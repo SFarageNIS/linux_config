@@ -4,6 +4,7 @@ Here are some of the tips I follow when making a new install.
 ## Basics
 - [ ]  Install/configure SSH
 - [ ]  Install Git
+- [ ]  Install [exa](https://the.exa.website/install/linux)
 
 ## Hardening
 - [ ]  [https://linux-audit.com/ubuntu-server-hardening-guide-quick-and-secure/](https://linux-audit.com/ubuntu-server-hardening-guide-quick-and-secure/)
