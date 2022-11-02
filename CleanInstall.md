@@ -5,6 +5,7 @@ Here are some of the tips I follow when making a new install.
 - [ ]  Install/configure SSH
 - [ ]  Install Git
 - [ ]  Install [exa](https://the.exa.website/install/linux)
+- [ ]  Remove FF snap package in favor of apt install
 
 ## Hardening
 - [ ]  [https://linux-audit.com/ubuntu-server-hardening-guide-quick-and-secure/](https://linux-audit.com/ubuntu-server-hardening-guide-quick-and-secure/)
