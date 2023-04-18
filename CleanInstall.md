@@ -8,6 +8,7 @@ Here are some of the tips I follow when making a new install.
 - [ ]  Remove FF snap package in favor of apt install
 
 ## Hardening
+- [ ]  https://dev-notes.eu/2020/12/LUKS-Encrypt-Hard-Drive-with-Cryptsetup-on-Ubuntu-20.04/
 - [ ]  [https://linux-audit.com/ubuntu-server-hardening-guide-quick-and-secure/](https://linux-audit.com/ubuntu-server-hardening-guide-quick-and-secure/)
 - [ ]  Create new user, add to su group
     - Update [default PAM settings](https://askubuntu.com/questions/894404/how-to-increase-the-number-of-hashing-rounds-for-etc-shadow)
