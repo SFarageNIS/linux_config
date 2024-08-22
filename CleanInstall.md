@@ -5,7 +5,7 @@ Here are some of the tips I follow when making a new install.
 - [ ]  Install/configure SSH
 - [ ]  Install Git
 - [ ]  Install [exa](https://the.exa.website/install/linux)
-- [ ]  Remove FF snap package in favor of apt install
+- [ ]  Remove FF snap package in favor of apt [install](https://support.mozilla.org/en-US/kb/install-firefox-linux)
 
 ## Hardening
 - [ ]  https://dev-notes.eu/2020/12/LUKS-Encrypt-Hard-Drive-with-Cryptsetup-on-Ubuntu-20.04/
