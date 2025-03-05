@@ -5,10 +5,11 @@ Here are some of the tips I follow when making a new install.
 - [ ]  Install/configure SSH
 - [ ]  Install Git
 - [ ]  Install [exa](https://the.exa.website/install/linux)
-- [ ]  Remove FF snap package in favor of apt [install](https://support.mozilla.org/en-US/kb/install-firefox-linux)
+- [ ]  Remove FF snap package in favor of apt [install](https://support.mozilla.org/en-US/kb/install-firefox-linux#w_install-firefox-deb-package-for-debian-based-distributions-recommended)
 
 ## Hardening
-- [ ]  https://dev-notes.eu/2020/12/LUKS-Encrypt-Hard-Drive-with-Cryptsetup-on-Ubuntu-20.04/
+- [ ]  `https://dev-notes.eu/2020/12/LUKS-Encrypt-Hard-Drive-with-Cryptsetup-on-Ubuntu-20.04/` (dead as of 3/25 :/ served me well but I have page DL'd)
+- [ ]  Enable LUKS disk encryption with keyfile on Linux
 - [ ]  [https://linux-audit.com/ubuntu-server-hardening-guide-quick-and-secure/](https://linux-audit.com/ubuntu-server-hardening-guide-quick-and-secure/)
 - [ ]  Create new user, add to su group
     - Update [default PAM](https://askubuntu.com/questions/894404/how-to-increase-the-number-of-hashing-rounds-for-etc-shadow) [settings](https://www.reddit.com/r/Passwords/comments/1cd58c3/psa_default_scrypt_yescrypt_and_gostyescrypt/)
