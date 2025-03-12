@@ -1,12 +1,6 @@
 # Clean install first steps
 Here are some of the tips I follow when making a new install.
 
-## Basics
-- [ ]  Install/configure SSH
-- [ ]  Install Git
-- [ ]  Install [exa](https://the.exa.website/install/linux)
-- [ ]  Remove FF snap package in favor of apt [install](https://support.mozilla.org/en-US/kb/install-firefox-linux#w_install-firefox-deb-package-for-debian-based-distributions-recommended)
-
 ## Hardening
 - [ ]  `https://dev-notes.eu/2020/12/LUKS-Encrypt-Hard-Drive-with-Cryptsetup-on-Ubuntu-20.04/` (dead as of 3/25 :/ served me well but I have page DL'd)
 - [ ]  Enable LUKS disk encryption with keyfile on Linux
@@ -19,7 +13,13 @@ Here are some of the tips I follow when making a new install.
 - [ ]  SSH - refresh keys if using base image of anything
     - [ ]  `cd etc/ssh/`, remove all existing default keys `rm -v /etc/ssh/ssh_host_*`, regenerate new keys `dpkg-reconfigure openssh-server`, restart ssh service `systemctl restart ssh`
 - [ ]  SSH - [Change default port](https://www.scalahosting.com/kb/changing-default-ssh-port-in-openssh/) and only allow keyfiles, [general](https://www.redhat.com/sysadmin/eight-ways-secure-ssh) [hardening](https://www.digitalocean.com/community/tutorials/how-to-harden-openssh-on-ubuntu-20-04)
-    
+
+## Initial config/apps
+- [ ]  Install/configure SSH
+- [ ]  Install Git
+- [ ]  Install [exa](https://the.exa.website/install/linux)
+- [ ]  Remove FF snap package in favor of apt [install](https://support.mozilla.org/en-US/kb/install-firefox-linux#w_install-firefox-deb-package-for-debian-based-distributions-recommended)
+
 ## Vim settings
 - [ ]  Vim settings (~/.vimrc)
 - [ ]  Set VIM default editor (`sudo update-alternatives --config editor`)
