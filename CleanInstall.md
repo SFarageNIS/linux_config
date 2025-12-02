@@ -1,6 +1,9 @@
 # Clean install first steps
 Here are some of the tips I follow when making a new install.
 
+> [!NOTE]  
+> This guide should be second to CIS guidelines and automated rules, which I now use by default.  CIS and Ubuntu Pro.
+> 
 ## Hardening
 - [ ]  `https://dev-notes.eu/2020/12/LUKS-Encrypt-Hard-Drive-with-Cryptsetup-on-Ubuntu-20.04/` (dead as of 3/25 :/ served me well but I have page DL'd)
 - [ ]  Enable LUKS disk encryption with keyfile on Linux
