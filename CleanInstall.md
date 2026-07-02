@@ -7,7 +7,7 @@ Here are some of the tips I follow when making a new install.
 ## Hardening
 - [ ]  `https://dev-notes.eu/2020/12/LUKS-Encrypt-Hard-Drive-with-Cryptsetup-on-Ubuntu-20.04/` (dead as of 3/25 :/ served me well but I have page DL'd)
 - [ ]  Enable LUKS disk encryption with keyfile on Linux
-- [ ]  [https://linux-audit.com/ubuntu-server-hardening-guide-quick-and-secure/](https://linux-audit.com/ubuntu-server-hardening-guide-quick-and-secure/)
+- [ ]  [https://linux-audit.com/ubuntu-server-hardening-guide-quick-and-secure/](https://linux-audit.com/ubuntu-server-hardening-guide-quick-and-secure/) and [this](https://computingforgeeks.com/harden-ubuntu-2604-server/)
 - [ ]  Create new user, add to su group
     - Update [default PAM](https://askubuntu.com/questions/894404/how-to-increase-the-number-of-hashing-rounds-for-etc-shadow) [settings](https://www.reddit.com/r/Passwords/comments/1cd58c3/psa_default_scrypt_yescrypt_and_gostyescrypt/)
     - `/etc/pam.d/common-password` - edit the line with pam_unix.so, add `yescrypt` if not present, and `rounds=11` if not present.
